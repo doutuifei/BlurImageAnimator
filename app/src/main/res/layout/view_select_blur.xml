@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/selecting_view"
+        android:layout_width="@dimen/dp_297"
+        android:layout_height="@dimen/dp_297"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_207"
+            android:layout_height="@dimen/dp_207"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_select_blur_center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+    <com.muzi.blurimageanimator.view.BlurCircleImageView
+        android:id="@+id/image1"
+        android:layout_width="@dimen/dp_85"
+        android:layout_height="@dimen/dp_85"
+        android:layout_above="@id/selecting_view"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginRight="@dimen/dp_214"
+        android:layout_toLeftOf="@id/selecting_view"
+        tools:background="@drawable/select_head_1" />
+
+
+    <com.muzi.blurimageanimator.view.BlurCircleImageView
+        android:id="@+id/image2"
+        android:layout_width="@dimen/dp_115"
+        android:layout_height="@dimen/dp_115"
+        android:layout_alignTop="@id/selecting_view"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_m_55"
+        android:layout_toLeftOf="@id/selecting_view"
+        tools:background="@drawable/select_head_2" />
+
+    <com.muzi.blurimageanimator.view.BlurCircleImageView
+        android:id="@+id/image3"
+        android:layout_width="@dimen/dp_76"
+        android:layout_height="@dimen/dp_76"
+        android:layout_above="@id/selecting_view"
+        android:layout_alignRight="@id/selecting_view"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:layout_marginRight="@dimen/dp_m_24"
+        tools:background="@drawable/select_head_3" />
+
+    <com.muzi.blurimageanimator.view.BlurCircleImageView
+        android:id="@+id/image4"
+        android:layout_width="@dimen/dp_85"
+        android:layout_height="@dimen/dp_85"
+        android:layout_above="@id/selecting_view"
+        android:layout_marginBottom="@dimen/dp_m_43"
+        android:layout_marginLeft="@dimen/dp_223"
+        android:layout_toRightOf="@id/selecting_view"
+        tools:background="@drawable/select_head_4" />
+
+    <com.muzi.blurimageanimator.view.BlurCircleImageView
+        android:id="@+id/image5"
+        android:layout_width="@dimen/dp_112"
+        android:layout_height="@dimen/dp_112"
+        android:layout_alignBottom="@id/selecting_view"
+        android:layout_marginBottom="@dimen/dp_31"
+        android:layout_marginRight="@dimen/dp_54"
+        android:layout_toLeftOf="@id/selecting_view"
+        tools:background="@drawable/select_head_5" />
+
+    <com.muzi.blurimageanimator.view.BlurCircleImageView
+        android:id="@+id/image6"
+        android:layout_width="@dimen/dp_89"
+        android:layout_height="@dimen/dp_89"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_43"
+        android:layout_toRightOf="@id/selecting_view"
+        tools:background="@drawable/select_head_6" />
+
+    <com.muzi.blurimageanimator.view.BlurCircleImageView
+        android:id="@+id/image7"
+        android:layout_width="@dimen/dp_88"
+        android:layout_height="@dimen/dp_88"
+        android:layout_below="@id/selecting_view"
+        android:layout_marginRight="@dimen/dp_241"
+        android:layout_marginTop="@dimen/dp_31"
+        android:layout_toLeftOf="@id/selecting_view"
+        tools:background="@drawable/select_head_7" />
+
+    <com.muzi.blurimageanimator.view.BlurCircleImageView
+        android:id="@+id/image8"
+        android:layout_width="@dimen/dp_82"
+        android:layout_height="@dimen/dp_82"
+        android:layout_below="@id/selecting_view"
+        android:layout_marginRight="@dimen/dp_18"
+        android:layout_marginTop="@dimen/dp_65"
+        android:layout_toLeftOf="@id/selecting_view"
+        tools:background="@drawable/select_head_8" />
+
+    <com.muzi.blurimageanimator.view.BlurCircleImageView
+        android:id="@+id/image9"
+        android:layout_width="@dimen/dp_82"
+        android:layout_height="@dimen/dp_82"
+        android:layout_alignLeft="@id/selecting_view"
+        android:layout_below="@id/selecting_view"
+        android:layout_marginLeft="@dimen/dp_82"
+        android:layout_marginTop="@dimen/dp_23"
+        tools:background="@drawable/select_head_9" />
+
+    <com.muzi.blurimageanimator.view.BlurCircleImageView
+        android:id="@+id/image10"
+        android:layout_width="@dimen/dp_81"
+        android:layout_height="@dimen/dp_81"
+        android:layout_below="@id/selecting_view"
+        android:layout_marginLeft="@dimen/dp_17"
+        android:layout_marginTop="@dimen/dp_71"
+        android:layout_toRightOf="@id/selecting_view"
+        tools:background="@drawable/select_head_10" />
+
+    <com.muzi.blurimageanimator.view.BlurCircleImageView
+        android:id="@+id/image11"
+        android:layout_width="@dimen/dp_87"
+        android:layout_height="@dimen/dp_87"
+        android:layout_below="@id/selecting_view"
+        android:layout_marginLeft="@dimen/dp_283"
+        android:layout_marginTop="@dimen/dp_7"
+        android:layout_toRightOf="@id/selecting_view"
+        tools:background="@drawable/select_head_11" />
+
+</RelativeLayout>
