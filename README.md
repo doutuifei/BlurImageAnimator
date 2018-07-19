@@ -10,17 +10,18 @@
 
 
 ## 使用
-> 思路：底部放一张最大高斯模糊后的图片，使用```FrameLayout```在上面放一个没有模糊处理的图片。通过改变上层图片的```setAlpha(float alpha)```做到动画效果。
+
+   > 思路：底部放一张最大高斯模糊后的图片，使用```FrameLayout```在上面放一个没有模糊处理的图片。通过改变上层图片的```setAlpha(float alpha)```做到动画效果。
 初始状态为显示高斯模糊图片。
 
 * 代码中用```Fresco```做的模糊处理，具体用什么框架模糊处理随意，只需要修改以下代码即可
 
-1. 继承```BlurView```，并重写以下三个方法。[可参考FrescoBlurView.java](https://github.com/mzyq/BlurImageAnimator/blob/0600341ed8302059eeeb553b64ce7caee64661d7/app/src/main/java/com/muzi/blurimageanimator/blur/FrescoBlurView.java)
+1. 继承```BlurView```，并重写以下三个方法。[可参考FrescoBlurView.java](https://github.com/mzyq/BlurImageAnimator/blob/764107dd5285e6a6ac22c476d223463d276d9658/app/src/main/java/com/muzi/blurimageanimator/blur/FrescoBlurView.java)
 
 
-```java
+    ```java
 
-   protected abstract View getImageView(Context context);
+    protected abstract View getImageView(Context context);
 
     /**
      * 模糊图片加载
@@ -29,7 +30,7 @@
      * @param imagePath
      * @param blueRadius
      */
-   public abstract void blurImage(View blurView, Object imagePath, int blueRadius);
+    public abstract void blurImage(View blurView, Object imagePath, int blueRadius);
 
     /**
      * 正常图片加载
@@ -39,18 +40,18 @@
      */
     public abstract void normalImage(View blurView, Object imagePath);
 
-```
+    ```
 
 
 2. 设置需要加载的图片路径
-```java
-   public void setImagePath(Object imagePath) {}
-```
+    ```java
+    public void setImagePath(Object imagePath)
+    ```
 
 3. 改变模糊程度/改变图片透明度
-```java
-   public void setImageAlpha(float alpha) {}
-```
+    ```java
+    public void setImageAlpha(float alpha)
+    ```
 
 4. 动画：支持ValueAnimator和ObjectAnimator
 
@@ -83,16 +84,12 @@
 
  * 设置最大模糊半径，默认为16
 
- ```java
-   public int getBlurRadius() {
-           return super.getBlurRadius();
-       }
- ```
+     ```java
+     public int getBlurRadius()
+     ```
 
  * 显示模糊图片，默认显示模糊图片
 
- ```java
-   public boolean showBlueView() {
-           return super.showBlueView();
-       }
- ```
+     ```java
+     public boolean showBlueView()
+     ```
