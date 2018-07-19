@@ -4,6 +4,7 @@
 * 这里只讲高斯模糊动画的处理，不讨论高斯模糊的处理方式。想看高斯模糊处理的可以参考这个[Android 图片高斯模糊解决方案](https://www.jianshu.com/p/02da487a2f43)
 * 通过```Bitmap```多次处理高斯模糊做动画，容易卡顿或者OOM。
 * 优点：解耦，易扩展
+* 实际使用什么模糊方法随意，这只是一个例子
 
 ## 预览
 ![image](https://github.com/mzyq/BlurImageAnimator/blob/aedcf4336444ab3e447f92eb60edc01df6385eaf/images/simple.gif)
@@ -16,7 +17,7 @@
 
 * 代码中用```Fresco```做的模糊处理，具体用什么框架模糊处理随意，只需要修改以下代码即可
 
-1. 继承```BlurView```，并重写以下三个方法。[可参考FrescoBlurView.java](https://github.com/mzyq/BlurImageAnimator/blob/764107dd5285e6a6ac22c476d223463d276d9658/app/src/main/java/com/muzi/blurimageanimator/blur/FrescoBlurView.java)
+1. 继承```BlurView```，并重写以下三个方法。
 
 
     ```java
@@ -30,7 +31,7 @@
      * @param imagePath
      * @param blueRadius
      */
-    public abstract void blurImage(View blurView, Object imagePath, int blueRadius);
+    public abstract void blurImage(Context context, View blurView, Object imagePath, int blueRadius);
 
     /**
      * 正常图片加载
@@ -38,7 +39,7 @@
      * @param blurView
      * @param imagePath
      */
-    public abstract void normalImage(View blurView, Object imagePath);
+    public abstract void normalImage(Context context, View blurView, Object imagePath);
 
     ```
 
@@ -93,3 +94,10 @@
      ```java
      public boolean showBlueView()
      ```
+ * 例子参考
+
+[FrescoBlurView](https://github.com/mzyq/BlurImageAnimator/blob/c76f118a26e1f190a62c8294958b393735c09474/app/src/main/java/com/muzi/blurimageanimator/fresco/FrescoBlurView.java)
+
+[GlideBlurView](https://github.com/mzyq/BlurImageAnimator/blob/c76f118a26e1f190a62c8294958b393735c09474/app/src/main/java/com/muzi/blurimageanimator/glide/GlideBlurView.java)
+
+[PicassoBlurView](https://github.com/mzyq/BlurImageAnimator/blob/c76f118a26e1f190a62c8294958b393735c09474/app/src/main/java/com/muzi/blurimageanimator/picasso/PicassoBlurView.java)
