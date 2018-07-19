@@ -14,15 +14,15 @@ import android.widget.FrameLayout;
  * 邮箱: lipeng@moyi365.com
  * 功能:
  */
-public abstract class BlurView extends FrameLayout {
+public abstract class BlurView<V extends View, P extends Object> extends FrameLayout {
 
     private final int MAX_BLUR_RADIUS = 10;
 
-    private View blurView;
-    private View normalView;
+    private V blurView;
+    private V normalView;
+    private P imagePath;//图片地址
     private float curreAlpha = 0f;
     private int blueRadius;//模糊半径
-    private Object imagePath;//图片地址
 
     public BlurView(@NonNull Context context) {
         this(context, null, 0);
@@ -78,7 +78,7 @@ public abstract class BlurView extends FrameLayout {
      *
      * @param imagePath
      */
-    public void setImagePath(@NonNull Object imagePath) {
+    public void setImagePath(@NonNull P imagePath) {
         this.imagePath = imagePath;
         if (imagePath != null) {
             blurImage(blurView, imagePath, blueRadius);
@@ -98,7 +98,7 @@ public abstract class BlurView extends FrameLayout {
         }
     }
 
-   protected abstract View getImageView(Context context);
+    protected abstract V getImageView(Context context);
 
     /**
      * 模糊图片加载
@@ -107,14 +107,14 @@ public abstract class BlurView extends FrameLayout {
      * @param imagePath
      * @param blueRadius
      */
-   public abstract void blurImage(View blurView, Object imagePath, int blueRadius);
+    public abstract void blurImage(V blurView, P imagePath, int blueRadius);
 
     /**
      * 正常图片加载
      *
-     * @param blurView
+     * @param normalView
      * @param imagePath
      */
-    public abstract void normalImage(View blurView, Object imagePath);
+    public abstract void normalImage(V normalView, P imagePath);
 
 }

@@ -6,7 +6,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
-import android.view.View;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.controller.AbstractDraweeController;
@@ -22,7 +21,7 @@ import com.muzi.blurimageanimator.R;
  * 邮箱: lipeng@moyi365.com
  * 功能:
  */
-public class FrescoBlurView extends BlurView {
+public class FrescoBlurView extends BlurView<SimpleDraweeView, Integer> {
 
     public FrescoBlurView(@NonNull Context context) {
         this(context, null, 0);
@@ -38,21 +37,21 @@ public class FrescoBlurView extends BlurView {
 
 
     @Override
-    protected View getImageView(Context context) {
+    protected SimpleDraweeView getImageView(Context context) {
         SimpleDraweeView view = (SimpleDraweeView) LayoutInflater.from(context).inflate(R.layout.view_fresco_sample, null);
         return view;
     }
 
     @Override
-    public void blurImage(View blurView, Object imagePath, int blueRadius) {
+    public void blurImage(SimpleDraweeView blurView, Integer imagePath, int blueRadius) {
         Uri uri = Uri.parse("res:///" + imagePath);
-        setBlurImageUri((SimpleDraweeView) blurView, uri, 3, blueRadius);
+        setBlurImageUri(blurView, uri, 3, blueRadius);
     }
 
     @Override
-    public void normalImage(View blurView, Object imagePath) {
+    public void normalImage(SimpleDraweeView normalView, Integer imagePath) {
         Uri uri = Uri.parse("res:///" + imagePath);
-        ((SimpleDraweeView) blurView).setImageURI(uri);
+        normalView.setImageURI(uri);
     }
 
     @Override
