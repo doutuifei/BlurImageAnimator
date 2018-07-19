@@ -1,5 +1,7 @@
 # 图片高斯模糊动画
 
+[![](https://jitpack.io/v/mzyq/BlurImageAnimator.svg)](https://jitpack.io/#mzyq/BlurImageAnimator)
+
 ## 前言
 * 这里只讲高斯模糊动画的处理，不讨论高斯模糊的处理方式。想看高斯模糊处理的可以参考这个[Android 图片高斯模糊解决方案](https://www.jianshu.com/p/02da487a2f43)
 * 通过```Bitmap```多次处理高斯模糊做动画，容易卡顿或者OOM。
@@ -16,6 +18,50 @@
 初始状态为显示高斯模糊图片。
 
 * 代码中用```Fresco```做的模糊处理，具体用什么框架模糊处理随意，只需要修改以下代码即可
+
+### 依赖
+1. Gradle
+
+```
+
+allprojects {
+  repositories {
+    maven { url 'https://jitpack.io' }
+  }
+}
+
+```
+
+```java
+
+dependencies {
+  implementation 'com.github.mzyq:BlurImageAnimator:0.1.0'
+}
+
+```
+
+2.
+```java
+
+<repositories>
+  <repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+  </repository>
+</repositories>
+
+```
+
+```java
+
+<dependency>
+   <groupId>com.github.mzyq</groupId>
+   <artifactId>BlurImageAnimator</artifactId>
+   <version>0.1.0</version>
+</dependency>
+
+```
+### 代码
 
 1. 继承```BlurView```，并重写以下三个方法。
 
@@ -96,8 +142,8 @@
      ```
  * 例子参考
 
-[FrescoBlurView](https://github.com/mzyq/BlurImageAnimator/blob/c76f118a26e1f190a62c8294958b393735c09474/app/src/main/java/com/muzi/blurimageanimator/fresco/FrescoBlurView.java)
+[FrescoBlurView](https://github.com/mzyq/BlurImageAnimator/blob/296ca60635c7f525e1c2417bc71e915ad53d7fa8/app/src/main/java/com/muzi/blurimageanimator/fresco/FrescoBlurView.java)
 
-[GlideBlurView](https://github.com/mzyq/BlurImageAnimator/blob/c76f118a26e1f190a62c8294958b393735c09474/app/src/main/java/com/muzi/blurimageanimator/glide/GlideBlurView.java)
+[GlideBlurView](https://github.com/mzyq/BlurImageAnimator/blob/296ca60635c7f525e1c2417bc71e915ad53d7fa8/app/src/main/java/com/muzi/blurimageanimator/glide/GlideBlurView.java)
 
-[PicassoBlurView](https://github.com/mzyq/BlurImageAnimator/blob/c76f118a26e1f190a62c8294958b393735c09474/app/src/main/java/com/muzi/blurimageanimator/picasso/PicassoBlurView.java)
+[PicassoBlurView](https://github.com/mzyq/BlurImageAnimator/blob/296ca60635c7f525e1c2417bc71e915ad53d7fa8/app/src/main/java/com/muzi/blurimageanimator/picasso/PicassoBlurView.java)
