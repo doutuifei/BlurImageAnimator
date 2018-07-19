@@ -1,6 +1,6 @@
 # 图片高斯模糊动画
 
-[![](https://jitpack.io/v/mzyq/BlurImageAnimator.svg)](https://jitpack.io/#mzyq/BlurImageAnimator)
+[![version](https://jitpack.io/v/mzyq/BlurImageAnimator.svg)](https://jitpack.io/#mzyq/BlurImageAnimator)
 
 ## 前言
 * 这里只讲高斯模糊动画的处理，不讨论高斯模糊的处理方式。想看高斯模糊处理的可以参考这个[Android 图片高斯模糊解决方案](https://www.jianshu.com/p/02da487a2f43)
@@ -22,45 +22,46 @@
 ### 依赖
 1. Gradle
 
-```
+    ```
 
-allprojects {
-  repositories {
-    maven { url 'https://jitpack.io' }
-  }
-}
+    allprojects {
+      repositories {
+        maven { url 'https://jitpack.io' }
+      }
+    }
 
-```
+    ```
 
-```java
+    ```java
 
-dependencies {
-  implementation 'com.github.mzyq:BlurImageAnimator:0.1.0'
-}
+    dependencies {
+      implementation 'com.github.mzyq:BlurImageAnimator:0.1.0'
+    }
 
-```
+    ```
 
-2.
-```java
+2. Maven
 
-<repositories>
-  <repository>
-    <id>jitpack.io</id>
-    <url>https://jitpack.io</url>
-  </repository>
-</repositories>
+    ```java
 
-```
+    <repositories>
+      <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+      </repository>
+    </repositories>
 
-```java
+    ```
 
-<dependency>
-   <groupId>com.github.mzyq</groupId>
-   <artifactId>BlurImageAnimator</artifactId>
-   <version>0.1.0</version>
-</dependency>
+    ```java
 
-```
+    <dependency>
+       <groupId>com.github.mzyq</groupId>
+       <artifactId>BlurImageAnimator</artifactId>
+       <version>0.1.0</version>
+    </dependency>
+
+    ```
 ### 代码
 
 1. 继承```BlurView```，并重写以下三个方法。
@@ -142,8 +143,8 @@ dependencies {
      ```
  * 例子参考
 
-[FrescoBlurView](https://github.com/mzyq/BlurImageAnimator/blob/296ca60635c7f525e1c2417bc71e915ad53d7fa8/app/src/main/java/com/muzi/blurimageanimator/fresco/FrescoBlurView.java)
+    [FrescoBlurView](https://github.com/mzyq/BlurImageAnimator/blob/296ca60635c7f525e1c2417bc71e915ad53d7fa8/app/src/main/java/com/muzi/blurimageanimator/fresco/FrescoBlurView.java)
 
-[GlideBlurView](https://github.com/mzyq/BlurImageAnimator/blob/296ca60635c7f525e1c2417bc71e915ad53d7fa8/app/src/main/java/com/muzi/blurimageanimator/glide/GlideBlurView.java)
+    [GlideBlurView](https://github.com/mzyq/BlurImageAnimator/blob/296ca60635c7f525e1c2417bc71e915ad53d7fa8/app/src/main/java/com/muzi/blurimageanimator/glide/GlideBlurView.java)
 
-[PicassoBlurView](https://github.com/mzyq/BlurImageAnimator/blob/296ca60635c7f525e1c2417bc71e915ad53d7fa8/app/src/main/java/com/muzi/blurimageanimator/picasso/PicassoBlurView.java)
+    [PicassoBlurView](https://github.com/mzyq/BlurImageAnimator/blob/296ca60635c7f525e1c2417bc71e915ad53d7fa8/app/src/main/java/com/muzi/blurimageanimator/picasso/PicassoBlurView.java)
