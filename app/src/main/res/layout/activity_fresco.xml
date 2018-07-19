@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activity.FrescoActivity">
 
-    <com.muzi.blurimageanimator.FrescoBlurView
+    <com.muzi.blurimageanimator.view.FrescoBlurView
         android:id="@+id/frescoView"
         android:layout_width="@dimen/dp_150"
         android:layout_height="@dimen/dp_150"

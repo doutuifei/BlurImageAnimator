@@ -14,6 +14,14 @@ public class WelActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wel);
 
+        findViewById(R.id.btn_fresco).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(WelActivity.this, FrescoActivity.class));
+            }
+        });
+
+
         findViewById(R.id.btn_mutil).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -21,18 +29,5 @@ public class WelActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.btn_simple).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(WelActivity.this, SimpleActivity.class));
-            }
-        });
-
-        findViewById(R.id.btn_fresco).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(WelActivity.this, FrescoActivity.class));
-            }
-        });
     }
 }

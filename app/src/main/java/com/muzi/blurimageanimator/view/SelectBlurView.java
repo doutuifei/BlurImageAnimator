@@ -50,7 +50,7 @@ public class SelectBlurView extends RelativeLayout {
             R.drawable.select_head_19,
             R.drawable.select_head_20
     };
-    private BlurCircleImageView[] ivHeads = new BlurCircleImageView[11];
+    private FrescoBlurView[] ivHeads = new FrescoBlurView[11];
 
     public SelectBlurView(Context context) {
         this(context, null, 0);
@@ -153,7 +153,7 @@ public class SelectBlurView extends RelativeLayout {
             }
         }
         for (int i = 0; i < arr.length; i++) {
-            ivHeads[i].setImageResource(arr[i]);
+            ivHeads[i].setImagePath(arr[i]);
         }
         return arr;
     }

@@ -24,7 +24,7 @@
     </FrameLayout>
 
 
-    <com.muzi.blurimageanimator.view.BlurCircleImageView
+    <com.muzi.blurimageanimator.view.FrescoBlurView
         android:id="@+id/image1"
         android:layout_width="@dimen/dp_85"
         android:layout_height="@dimen/dp_85"
@@ -35,7 +35,7 @@
         tools:background="@drawable/select_head_1" />
 
 
-    <com.muzi.blurimageanimator.view.BlurCircleImageView
+    <com.muzi.blurimageanimator.view.FrescoBlurView
         android:id="@+id/image2"
         android:layout_width="@dimen/dp_115"
         android:layout_height="@dimen/dp_115"
@@ -45,7 +45,7 @@
         android:layout_toLeftOf="@id/selecting_view"
         tools:background="@drawable/select_head_2" />
 
-    <com.muzi.blurimageanimator.view.BlurCircleImageView
+    <com.muzi.blurimageanimator.view.FrescoBlurView
         android:id="@+id/image3"
         android:layout_width="@dimen/dp_76"
         android:layout_height="@dimen/dp_76"
@@ -55,7 +55,7 @@
         android:layout_marginRight="@dimen/dp_m_24"
         tools:background="@drawable/select_head_3" />
 
-    <com.muzi.blurimageanimator.view.BlurCircleImageView
+    <com.muzi.blurimageanimator.view.FrescoBlurView
         android:id="@+id/image4"
         android:layout_width="@dimen/dp_85"
         android:layout_height="@dimen/dp_85"
@@ -65,7 +65,7 @@
         android:layout_toRightOf="@id/selecting_view"
         tools:background="@drawable/select_head_4" />
 
-    <com.muzi.blurimageanimator.view.BlurCircleImageView
+    <com.muzi.blurimageanimator.view.FrescoBlurView
         android:id="@+id/image5"
         android:layout_width="@dimen/dp_112"
         android:layout_height="@dimen/dp_112"
@@ -75,7 +75,7 @@
         android:layout_toLeftOf="@id/selecting_view"
         tools:background="@drawable/select_head_5" />
 
-    <com.muzi.blurimageanimator.view.BlurCircleImageView
+    <com.muzi.blurimageanimator.view.FrescoBlurView
         android:id="@+id/image6"
         android:layout_width="@dimen/dp_89"
         android:layout_height="@dimen/dp_89"
@@ -84,7 +84,7 @@
         android:layout_toRightOf="@id/selecting_view"
         tools:background="@drawable/select_head_6" />
 
-    <com.muzi.blurimageanimator.view.BlurCircleImageView
+    <com.muzi.blurimageanimator.view.FrescoBlurView
         android:id="@+id/image7"
         android:layout_width="@dimen/dp_88"
         android:layout_height="@dimen/dp_88"
@@ -94,7 +94,7 @@
         android:layout_toLeftOf="@id/selecting_view"
         tools:background="@drawable/select_head_7" />
 
-    <com.muzi.blurimageanimator.view.BlurCircleImageView
+    <com.muzi.blurimageanimator.view.FrescoBlurView
         android:id="@+id/image8"
         android:layout_width="@dimen/dp_82"
         android:layout_height="@dimen/dp_82"
@@ -104,7 +104,7 @@
         android:layout_toLeftOf="@id/selecting_view"
         tools:background="@drawable/select_head_8" />
 
-    <com.muzi.blurimageanimator.view.BlurCircleImageView
+    <com.muzi.blurimageanimator.view.FrescoBlurView
         android:id="@+id/image9"
         android:layout_width="@dimen/dp_82"
         android:layout_height="@dimen/dp_82"
@@ -114,7 +114,7 @@
         android:layout_marginTop="@dimen/dp_23"
         tools:background="@drawable/select_head_9" />
 
-    <com.muzi.blurimageanimator.view.BlurCircleImageView
+    <com.muzi.blurimageanimator.view.FrescoBlurView
         android:id="@+id/image10"
         android:layout_width="@dimen/dp_81"
         android:layout_height="@dimen/dp_81"
@@ -124,7 +124,7 @@
         android:layout_toRightOf="@id/selecting_view"
         tools:background="@drawable/select_head_10" />
 
-    <com.muzi.blurimageanimator.view.BlurCircleImageView
+    <com.muzi.blurimageanimator.view.FrescoBlurView
         android:id="@+id/image11"
         android:layout_width="@dimen/dp_87"
         android:layout_height="@dimen/dp_87"

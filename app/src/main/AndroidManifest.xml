@@ -20,7 +20,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.MutilActivity" />
-        <activity android:name=".activity.SimpleActivity" />
         <activity android:name=".activity.FrescoActivity"></activity>
     </application>
 

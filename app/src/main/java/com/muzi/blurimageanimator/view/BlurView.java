@@ -1,4 +1,4 @@
-package com.muzi.blurimageanimator;
+package com.muzi.blurimageanimator.view;
 
 import android.content.Context;
 import android.support.annotation.FloatRange;
@@ -20,7 +20,6 @@ public abstract class BlurView extends FrameLayout {
 
     private View blurView;
     private View normalView;
-
     private float curreAlpha = 0f;
     private int blueRadius;//模糊半径
     private Object imagePath;//图片地址

@@ -1,4 +1,4 @@
-package com.muzi.blurimageanimator;
+package com.muzi.blurimageanimator.view;
 
 import android.content.Context;
 import android.net.Uri;
@@ -14,6 +14,7 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import com.facebook.imagepipeline.postprocessors.IterativeBoxBlurPostProcessor;
 import com.facebook.imagepipeline.request.ImageRequest;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
+import com.muzi.blurimageanimator.R;
 
 /**
  * 作者: lipeng
@@ -34,6 +35,7 @@ public class FrescoBlurView extends BlurView {
     public FrescoBlurView(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
+
 
     @Override
     protected View getImageView(Context context) {
