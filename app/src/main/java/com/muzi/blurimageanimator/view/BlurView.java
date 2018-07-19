@@ -78,7 +78,7 @@ public abstract class BlurView extends FrameLayout {
      *
      * @param imagePath
      */
-    public void setImagePath(Object imagePath) {
+    public void setImagePath(@NonNull Object imagePath) {
         this.imagePath = imagePath;
         if (imagePath != null) {
             blurImage(blurView, imagePath, blueRadius);

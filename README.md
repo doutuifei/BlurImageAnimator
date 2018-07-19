@@ -41,30 +41,59 @@ animator.setDuration(2000);
 animator.start();
 ```
 
-## 源码
-* 底部放一张最大高斯模糊后的图片，使用```FrameLayout```在上面放一个没有模糊处理的图片。通过改变上层图片的```setAlpha(float alpha)```做到动画效果。
+## 使用
+> 思路：底部放一张最大高斯模糊后的图片，使用```FrameLayout```在上面放一个没有模糊处理的图片。通过改变上层图片的```setAlpha(float alpha)```做到动画效果。
 初始状态为显示高斯模糊图片。
+
 * 代码中用```Fresco```做的模糊处理，具体用什么框架模糊处理随意，只需要修改以下代码即可
 
+1. 继承```BlurView```，并重写以下三个方法
+
 ```java
-private void setBlurImageUri(SimpleDraweeView draweeView, Uri uri, int iterations, int blurRadius) {
-        try {
+   protected abstract View getImageView(Context context);
 
-            ImageRequest request = ImageRequestBuilder.newBuilderWithSource(uri)
-                    .setPostprocessor(new IterativeBoxBlurPostProcessor(iterations, blurRadius))
-                    .build();
-            AbstractDraweeController controller = Fresco.newDraweeControllerBuilder()
-                    .setOldController(draweeView.getController())
-                    .setImageRequest(request)
-                    .build();
-            draweeView.setController(controller);
+    /**
+     * 模糊图片加载
+     *
+     * @param blurView
+     * @param imagePath
+     * @param blueRadius
+     */
+   public abstract void blurImage(View blurView, Object imagePath, int blueRadius);
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+    /**
+     * 正常图片加载
+     *
+     * @param blurView
+     * @param imagePath
+     */
+    public abstract void normalImage(View blurView, Object imagePath);
 ```
 
-[BlurCircleImageView](https://github.com/mzyq/BlurImageAnimator/blob/5a8f877dea24d656ff1315bbd81f63f084d44d7e/app/src/main/java/com/muzi/blurimageanimator/view/BlurCircleImageView.java)
+[可参考FrescoBlurView.java](https://github.com/mzyq/BlurImageAnimator/blob/c78deb3a71a6d24a5df618f05a6253068148f884/app/src/main/java/com/muzi/blurimageanimator/view/FrescoBlurView.java)
 
+2. 设置需要加载的图片路径
+```java
+   public void setImagePath(Object imagePath) {}
+```
 
+3. 改变模糊程度/改变图片透明度
+```java
+   public void setImageAlpha(float alpha) {}
+```
+
+4. 其他方法
+
+ * 设置最大模糊半径，默认为16
+ ```java
+   public int getBlurRadius() {
+           return super.getBlurRadius();
+       }
+ ```
+
+ * 显示模糊图片，默认显示模糊图片
+ ```java
+   public boolean showBlueView() {
+           return super.showBlueView();
+       }
+ ```

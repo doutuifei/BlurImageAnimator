@@ -55,6 +55,16 @@ public class FrescoBlurView extends BlurView {
         ((SimpleDraweeView) blurView).setImageURI(uri);
     }
 
+    @Override
+    public boolean showBlueView() {
+        return super.showBlueView();
+    }
+
+    @Override
+    public int getBlurRadius() {
+        return super.getBlurRadius();
+    }
+
     /**
      * 高斯模糊图片
      *
