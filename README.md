@@ -15,7 +15,8 @@
 
 * 代码中用```Fresco```做的模糊处理，具体用什么框架模糊处理随意，只需要修改以下代码即可
 
-1. 继承```BlurView```，并重写以下三个方法
+1. 继承```BlurView```，并重写以下三个方法。[可参考FrescoBlurView.java](https://github.com/mzyq/BlurImageAnimator/blob/0600341ed8302059eeeb553b64ce7caee64661d7/app/src/main/java/com/muzi/blurimageanimator/blur/FrescoBlurView.java)
+
 
 ```java
 
@@ -40,7 +41,6 @@
 
 ```
 
-[可参考FrescoBlurView.java](https://github.com/mzyq/BlurImageAnimator/blob/c78deb3a71a6d24a5df618f05a6253068148f884/app/src/main/java/com/muzi/blurimageanimator/view/FrescoBlurView.java)
 
 2. 设置需要加载的图片路径
 ```java
