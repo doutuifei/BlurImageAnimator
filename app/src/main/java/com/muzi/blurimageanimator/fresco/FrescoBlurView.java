@@ -9,8 +9,8 @@ import android.view.LayoutInflater;
 
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.muzi.blurimageanimator.R;
-import com.muzi.blurimageanimator.blur.BlurView;
 import com.muzi.blurimageanimator.utils.BlurBitmapUtil;
+import com.muzi.library.BlurView;
 
 /**
  * 作者: lipeng
@@ -31,7 +31,6 @@ public class FrescoBlurView extends BlurView<SimpleDraweeView, Integer> {
     public FrescoBlurView(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
-
 
     @Override
     protected SimpleDraweeView getImageView(Context context) {

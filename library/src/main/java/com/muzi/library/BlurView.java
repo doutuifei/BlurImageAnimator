@@ -1,4 +1,4 @@
-package com.muzi.blurimageanimator.blur;
+package com.muzi.library;
 
 import android.content.Context;
 import android.support.annotation.FloatRange;

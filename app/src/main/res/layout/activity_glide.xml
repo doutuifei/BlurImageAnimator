@@ -6,10 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".activity.GlideActivity">
 
-    <com.muzi.blurimageanimator.glide.GlideBlurView
-        android:id="@+id/glideBlurView"
+    <ImageView
+        android:id="@+id/imageview"
         android:layout_width="@dimen/dp_150"
-        android:layout_height="@dimen/dp_150"
-        android:layout_gravity="center"/>
+        android:layout_height="@dimen/dp_150" />
 
 </FrameLayout>

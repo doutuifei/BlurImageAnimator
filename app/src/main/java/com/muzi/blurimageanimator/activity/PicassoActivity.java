@@ -10,13 +10,14 @@ import com.muzi.blurimageanimator.picasso.PicassoBlurView;
 public class PicassoActivity extends AppCompatActivity {
 
     private PicassoBlurView picassoBlurView;
+    private String path = "http://p1.qzone.la/upload/20150218/x5alew4n.jpg";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_picasso);
         picassoBlurView = findViewById(R.id.picassonBlur);
-        picassoBlurView.setImagePath(R.drawable.select_head_1);
+        picassoBlurView.setImagePath(path);
 
         ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(picassoBlurView, "ImageAlpha", 0, 1, 0);
         objectAnimator.setRepeatCount(ObjectAnimator.INFINITE);

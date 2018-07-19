@@ -8,8 +8,11 @@ import android.view.LayoutInflater;
 import android.widget.ImageView;
 
 import com.muzi.blurimageanimator.R;
-import com.muzi.blurimageanimator.blur.BlurView;
+import com.muzi.library.BlurView;
 import com.squareup.picasso.Picasso;
+
+import jp.wasabeef.picasso.transformations.BlurTransformation;
+import jp.wasabeef.picasso.transformations.CropCircleTransformation;
 
 /**
  * 作者: lipeng
@@ -17,7 +20,7 @@ import com.squareup.picasso.Picasso;
  * 邮箱: lipeng@moyi365.com
  * 功能:
  */
-public class PicassoBlurView extends BlurView<ImageView, Integer> {
+public class PicassoBlurView extends BlurView<ImageView, String> {
 
     public PicassoBlurView(@NonNull Context context) {
         super(context);
@@ -37,19 +40,19 @@ public class PicassoBlurView extends BlurView<ImageView, Integer> {
     }
 
     @Override
-    public void blurImage(Context context, ImageView blurView, Integer imagePath, int blueRadius) {
+    public void blurImage(Context context, ImageView blurView, String imagePath, int blueRadius) {
         Picasso.get()
                 .load(imagePath)
-                .transform(new PicassoBlurTransformation(context, blueRadius))
-                .transform(new PicassoCircleTransform())
+                .transform(new BlurTransformation(context, blueRadius))
+                .transform(new CropCircleTransformation())
                 .into(blurView);
     }
 
     @Override
-    public void normalImage(Context context, ImageView normalView, Integer imagePath) {
+    public void normalImage(Context context, ImageView normalView, String imagePath) {
         Picasso.get()
                 .load(imagePath)
-                .transform(new PicassoCircleTransform())
+                .transform(new CropCircleTransformation())
                 .into(normalView);
     }
 

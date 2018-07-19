@@ -10,7 +10,9 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.muzi.blurimageanimator.R;
-import com.muzi.blurimageanimator.blur.BlurView;
+import com.muzi.library.BlurView;
+
+import jp.wasabeef.glide.transformations.BlurTransformation;
 
 /**
  * 作者: lipeng
@@ -34,16 +36,15 @@ public class GlideBlurView extends BlurView<ImageView, Integer> {
 
     @Override
     protected ImageView getImageView(Context context) {
-        return (ImageView) LayoutInflater.from(context).inflate(R.layout.view_imageview, null, false);
+        return (ImageView) LayoutInflater.from(context).inflate(R.layout.view_imageview, null);
     }
 
     @Override
     public void blurImage(Context context, ImageView blurView, Integer imagePath, int blueRadius) {
         Glide.with(context)
                 .load(imagePath)
-                .apply(RequestOptions
-                        .bitmapTransform(new GlideBlurformation(context, blueRadius))
-                        .circleCropTransform())
+                .apply(RequestOptions.bitmapTransform(new BlurTransformation(blueRadius)))
+                .apply(RequestOptions.circleCropTransform())
                 .into(blurView);
     }
 
