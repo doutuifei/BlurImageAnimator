@@ -1,9 +1,10 @@
-package com.muzi.blurimageanimator;
+package com.muzi.blurimageanimator.activity;
 
 import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.muzi.blurimageanimator.R;
 import com.muzi.blurimageanimator.view.BlurCircleImageView;
 
 public class SimpleActivity extends AppCompatActivity {

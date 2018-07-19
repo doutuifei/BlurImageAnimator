@@ -1,9 +1,11 @@
-package com.muzi.blurimageanimator;
+package com.muzi.blurimageanimator.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.muzi.blurimageanimator.R;
 
 public class WelActivity extends AppCompatActivity {
 
@@ -26,5 +28,11 @@ public class WelActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.btn_fresco).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(WelActivity.this, FrescoActivity.class));
+            }
+        });
     }
 }

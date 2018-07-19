@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.SimpleActivity">
+    tools:context=".activity.FrescoActivity">
 
-    <com.muzi.blurimageanimator.view.BlurCircleImageView
-        android:id="@+id/blurCircleImageView"
+    <com.muzi.blurimageanimator.FrescoBlurView
+        android:id="@+id/frescoView"
         android:layout_width="@dimen/dp_150"
         android:layout_height="@dimen/dp_150"
-        android:layout_gravity="center"
-        tools:background="@drawable/select_head_1" />
+        android:layout_gravity="center" />
 
 </FrameLayout>

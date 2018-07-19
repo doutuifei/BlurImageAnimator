@@ -1,8 +1,9 @@
-package com.muzi.blurimageanimator;
+package com.muzi.blurimageanimator.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.muzi.blurimageanimator.R;
 import com.muzi.blurimageanimator.view.SelectBlurView;
 
 public class MutilActivity extends AppCompatActivity {
