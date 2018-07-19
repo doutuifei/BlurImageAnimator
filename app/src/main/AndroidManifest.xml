@@ -20,7 +20,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.MutilActivity" />
-        <activity android:name=".activity.FrescoActivity"></activity>
+        <activity android:name=".activity.FrescoActivity" />
+        <activity android:name=".activity.GlideActivity" />
+        <activity android:name=".activity.PicassoActivity"></activity>
     </application>
 
 </manifest>

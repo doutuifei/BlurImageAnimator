@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.FrescoActivity">
+    tools:context=".activity.PicassoActivity">
 
-    <com.muzi.blurimageanimator.fresco.FrescoBlurView
-        android:id="@+id/frescoView"
+    <com.muzi.blurimageanimator.picasso.PicassoBlurView
+        android:id="@+id/picassonBlur"
         android:layout_width="@dimen/dp_150"
         android:layout_height="@dimen/dp_150"
         android:layout_gravity="center" />

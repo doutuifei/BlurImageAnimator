@@ -21,6 +21,19 @@ public class WelActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.btn_glide).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(WelActivity.this, GlideActivity.class));
+            }
+        });
+
+        findViewById(R.id.btn_picasso).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(WelActivity.this, PicassoActivity.class));
+            }
+        });
 
         findViewById(R.id.btn_mutil).setOnClickListener(new View.OnClickListener() {
             @Override

@@ -81,8 +81,8 @@ public abstract class BlurView<V extends View, P extends Object> extends FrameLa
     public void setImagePath(@NonNull P imagePath) {
         this.imagePath = imagePath;
         if (imagePath != null) {
-            blurImage(blurView, imagePath, blueRadius);
-            normalImage(normalView, imagePath);
+            blurImage(getContext(), blurView, imagePath, blueRadius);
+            normalImage(getContext(), normalView, imagePath);
         }
     }
 
@@ -103,18 +103,20 @@ public abstract class BlurView<V extends View, P extends Object> extends FrameLa
     /**
      * 模糊图片加载
      *
-     * @param blurView
+     * @param context
+     * @param view
      * @param imagePath
      * @param blueRadius
      */
-    public abstract void blurImage(V blurView, P imagePath, int blueRadius);
+    public abstract void blurImage(Context context, V view, P imagePath, int blueRadius);
 
     /**
      * 正常图片加载
      *
-     * @param normalView
+     * @param context
+     * @param view
      * @param imagePath
      */
-    public abstract void normalImage(V normalView, P imagePath);
+    public abstract void normalImage(Context context, V view, P imagePath);
 
 }
