@@ -4,7 +4,7 @@ import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.muzi.blurimageanimator.view.FrescoBlurView;
+import com.muzi.blurimageanimator.blur.FrescoBlurView;
 import com.muzi.blurimageanimator.R;
 
 public class FrescoActivity extends AppCompatActivity {

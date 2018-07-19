@@ -10,6 +10,7 @@ import android.view.animation.LinearInterpolator;
 import android.widget.RelativeLayout;
 
 import com.muzi.blurimageanimator.R;
+import com.muzi.blurimageanimator.blur.FrescoBlurView;
 
 /**
  * 作者: lipeng
