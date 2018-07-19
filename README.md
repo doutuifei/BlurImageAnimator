@@ -1,4 +1,4 @@
-# 图片高斯模糊动画
+# Android图片高斯模糊动画
 
 [![version](https://jitpack.io/v/mzyq/BlurImageAnimator.svg)](https://jitpack.io/#mzyq/BlurImageAnimator)
 
@@ -16,8 +16,6 @@
 
    > 思路：底部放一张最大高斯模糊后的图片，使用```FrameLayout```在上面放一个没有模糊处理的图片。通过改变上层图片的```setAlpha(float alpha)```做到动画效果。
 初始状态为显示高斯模糊图片。
-
-* 代码中用```Fresco```做的模糊处理，具体用什么框架模糊处理随意，只需要修改以下代码即可
 
 ### 依赖
 1. Gradle
